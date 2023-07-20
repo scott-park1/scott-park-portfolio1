@@ -10,68 +10,53 @@ const last_posts = posts.slice(0, 3);
 
 <BaseLayout sideBarActiveItemID="home">
   <div class="pb-12 mt-5">
-    <div class="text-xl py-1">Hey there 👋</div>
-    <div class="text-5xl font-bold">I'm Manuel Ernesto</div>
-    <div class="text-3xl py-3 font-bold">Software Engineer and Entrepreneur</div>
+    <div class="text-xl py-1">Hi there 👋</div>
+    <div class="text-5xl font-bold">I'm Scott Park</div>
+    <div class="text-3xl py-3">A <b>Full Stack Developer</b> that is passionate about solving challenges and loves creating user-friendly experiences.</div>
     <div class="py-2">
       <text class="text-lg">
-        This is <b>Astrofy</b> a free and open-source template for your Personal Portfolio Website built with Astro and TailwindCSS.
-        Create in minutes a website with Blog, CV, Project Section, Store and RSS Feed. I hope you find
-        it useful!
+        Greetings! I am an aspiring Full Stack Developer based in Auckland. I recently completed an extensive course in software development at Dev Academy, where I gained the necessary skills to build full-stack applications. In addition, I bring a strong background in finance that would allow me to offer a comprehensive approach to problem-solving in the world of coding.
       </text>
     </div>
     <div class="mt-8">
-      <a class="btn" href="https://twitter.com/manuelernestog" target="_blank"> Let's connect!</a>
-      <a href="https://github.com/manuelernestog/astrofy" target="_blank" class="btn btn-outline ml-5">
-        Get This template
+      <!-- <a class="btn" href="https://twitter.com/manuelernestog" target="_blank"> Let's connect!</a> -->
+      <a href="https://drive.google.com/file/d/1ezksjhH5MBUvfFvkSIqGitkjnQQTvQtn/view?usp=drive_link" target="_blank" class="btn btn-outline ml-5">
+        Click here to download my CV
       </a>
     </div>
   </div>
 
   <div>
-    <div class="text-3xl w-full font-bold mb-2">My last projects {"</>"}</div>
+    <div class="text-3xl w-full font-bold mb-2">Projects</div>
   </div>
 
   <HorizontalCard
-    title="Demo Project 1"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="NEW"
+    title="Scotty the Footy"
+    img="/scottythefooty.png"
+    desc="A project created for every football fan around the world. It shows the details of Premier League teams, players, matches, league tables, and stats."
+    badge="Coming Soon"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Demo Project 2"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
+    title="Pocket Doro"
+    img="/pocketdoro.png"
+    desc="A project created for users to set time for personal work and add break sessions. We have included animated character and environment sprites to bring more fun and creativity."
+    url="https://pocketdoro.pushed.nz/"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Demo Project 3"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="FOSS"
+    title="Dogs"
+    img="/dogs.png"
+    desc="A side project created for any dog lovers to enter their dog names and breed. Users are able to edit their dog names and breed as well as delete them."
+    url="http://myfullstack-scott-whai23.devacademy.nz/"
   />
-
-  <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
-  </div>
-
-  {
-    last_posts.map((post) => (
-      <>
-        <HorizontalCard
-          title={post.data.title}
-          img={post.data.heroImage}
-          desc={post.data.description}
-          url={"/blog/" + post.slug}
-          target="_self"
-          badge={post.data.badge}
-        />
-        <div class="divider my-0" />
-      </>
-    ))
-  }
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Scott's Blog"
+    img="/scottparkblog.png"
+    desc="My first blog created during Foundations that includes the details about myself, and challenges and sprints we worked on."
+    url="https://scott-park1.github.io/"
+  />
+  <div class="divider my-0" />
+</>
 </BaseLayout>
