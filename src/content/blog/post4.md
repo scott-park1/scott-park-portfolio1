@@ -3,6 +3,7 @@ title: 'Dogs'
 description: 'A side project created for any dog lovers to enter their dog names and breed. Users are able to edit their dog names and breed as well as delete them.'
 pubDate: 'Jun 23 2023'
 heroImage: '/dogs.png'
+badge: 'Coming Soon'
 ---
 
 Project Description:

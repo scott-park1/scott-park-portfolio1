@@ -1,26 +1,40 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import HorizontalCard from "../components/HorizontalCard.astro";
-import { getCollection } from "astro:content";
+import BaseLayout from '../layouts/BaseLayout.astro'
+import HorizontalCard from '../components/HorizontalCard.astro'
+import { getCollection } from 'astro:content'
 
-const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+)
 
-const last_posts = posts.slice(0, 3);
+const last_posts = posts.slice(0, 3)
 ---
 
 <BaseLayout sideBarActiveItemID="home">
   <div class="pb-12 mt-5">
     <div class="text-xl py-1">Hi there 👋</div>
     <div class="text-5xl font-bold">I'm Scott Park</div>
-    <div class="text-3xl py-3">A <b>Full Stack Developer</b> that is passionate about solving challenges and loves creating user-friendly experiences.</div>
+    <div class="text-3xl py-3">
+      A <b>Full Stack Developer</b> that is passionate about solving challenges and
+      loves creating user-friendly experiences.
+    </div>
     <div class="py-2">
       <text class="text-lg">
-        Greetings! I am an aspiring Full Stack Developer based in Auckland. I recently completed an extensive course in software development at Dev Academy, where I gained the necessary skills to build full-stack applications. In addition, I bring a strong background in finance that would allow me to offer a comprehensive approach to problem-solving in the world of coding.
+        Greetings! I am an aspiring Full Stack Developer based in Auckland. I
+        recently completed an extensive course in software development at Dev
+        Academy, where I gained the necessary skills to build full-stack
+        applications. In addition, I bring a strong background in finance that
+        would allow me to offer a comprehensive approach to problem-solving in
+        the world of coding.
       </text>
     </div>
     <div class="mt-8">
       <!-- <a class="btn" href="https://twitter.com/manuelernestog" target="_blank"> Let's connect!</a> -->
-      <a href="https://drive.google.com/file/d/1ezksjhH5MBUvfFvkSIqGitkjnQQTvQtn/view?usp=sharing" target="_blank" class="btn btn-outline ml-5">
+      <a
+        href="https://drive.google.com/file/d/16ffv4PifbUOcloiLJoiTHQZxH_161myU/view?usp=sharing"
+        target="_blank"
+        class="btn btn-outline ml-5"
+      >
         Click here to download my CV
       </a>
     </div>
@@ -48,7 +62,7 @@ const last_posts = posts.slice(0, 3);
     title="Dogs"
     img="/dogs.png"
     desc="A side project created for any dog lovers to enter their dog names and breed. Users are able to edit their dog names and breed as well as delete them."
-    url="http://myfullstack-scott-whai23.devacademy.nz/"
+    badge="Coming Soon"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
@@ -57,6 +71,5 @@ const last_posts = posts.slice(0, 3);
     desc="My first blog created during Foundations that includes the details about myself, and challenges and sprints we worked on."
     url="https://scott-park1.github.io/"
   />
-  <div class="divider my-0" />
-</>
+  <div class="divider my-0"></div>
 </BaseLayout>
